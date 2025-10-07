@@ -3,6 +3,8 @@ import { baseQueryWithReauth } from '@/redux/base-query';
 import { CONTAINERURLS } from '@/redux/api-conf';
 
 export interface Container {
+  labels: any;
+  mounts: any;
   id: string;
   name: string;
   image: string;

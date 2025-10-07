@@ -25,7 +25,7 @@ import { useRouter, useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { OverviewTab } from './components/OverviewTab';
 import { LogsTab } from './components/LogsTab';
-import { DetailsTab } from './components/DetailsTab';
+// import { DetailsTab } from './components/DetailsTab';
 import { Terminal as TerminalComponent } from './components/Terminal';
 import ContainerDetailsLoading from './components/ContainerDetailsLoading';
 import { DeleteDialog } from '@/components/ui/delete-dialog';
@@ -170,7 +170,7 @@ export default function ContainerDetailsPage() {
 
           <div className="space-y-4">
             <Tabs defaultValue="overview" className="w-full">
-              <TabsList className="grid w-full grid-cols-5">
+              <TabsList className="grid w-full grid-cols-4">
                 <TabsTrigger value="overview">
                   <Info className="mr-2 h-4 w-4" />
                   {t('containers.overview')}
@@ -187,10 +187,10 @@ export default function ContainerDetailsPage() {
                   <Terminal className="mr-2 h-4 w-4" />
                   {t('containers.logs')}
                 </TabsTrigger>
-                <TabsTrigger value="details">
+                {/* <TabsTrigger value="details">
                   <HardDrive className="mr-2 h-4 w-4" />
                   {t('containers.details')}
-                </TabsTrigger>
+                </TabsTrigger> */}
               </TabsList>
               <TabsContent value="overview" className="mt-4">
                 <OverviewTab container={container} />
@@ -198,9 +198,9 @@ export default function ContainerDetailsPage() {
               <TabsContent value="logs" className="mt-4">
                 <LogsTab container={container} logs={allLogs} onLoadMore={handleLoadMoreLogs} />
               </TabsContent>
-              <TabsContent value="details" className="mt-4">
-                <DetailsTab container={container} />
-              </TabsContent>
+              {/* <TabsContent value="details" className="mt-4"> */}
+                {/* <DetailsTab container={container} /> */}
+              {/* </TabsContent> */}
               <TabsContent value="terminal" className="mt-4">
                 {container.status === 'running' ? (
                   <TerminalComponent containerId={containerId} />

@@ -4,6 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { formatDistanceToNow } from 'date-fns';
 import { Container } from '@/redux/services/container/containerApi';
 import { useTranslation } from '@/hooks/use-translation';
+import { ContainerMetadataCard } from './ContainerMetadataCard';
 
 interface OverviewTabProps {
   container: Container;
@@ -97,6 +98,11 @@ export function OverviewTab({ container }: OverviewTabProps) {
           </div>
         </CardContent>
       </Card>
+      {/* New Metadata Card */}
+        <div className="col-span-1 md:col-span-2">
+    <ContainerMetadataCard container={container} />
+  </div>
+
     </div>
   );
 }
