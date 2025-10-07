@@ -2,9 +2,18 @@ import { createApi } from '@reduxjs/toolkit/query/react';
 import { baseQueryWithReauth } from '@/redux/base-query';
 import { CONTAINERURLS } from '@/redux/api-conf';
 
+
+
+export interface ContainerMount {
+  source: string;
+  destination: string;
+  mode?: string;
+  rw?: boolean;
+  propagation?: string;
+}
 export interface Container {
-  labels: any;
-  mounts: any;
+  labels: Record<string, string>;
+  mounts: ContainerMount[];
   id: string;
   name: string;
   image: string;

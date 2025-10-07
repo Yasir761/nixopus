@@ -14,7 +14,7 @@ export function ContainerMetadataCard({ container }: ContainerMetadataCardProps)
     <Card className="w-full rounded-lg shadow-md border border-gray-200">
       <CardHeader>
         <CardTitle className="flex items-center gap-2 text-lg">
-          <Info className="h-5 w-5" /> Label
+          <Info className="h-5 w-5" /> Container Metadata
         </CardTitle>
       </CardHeader>
       <CardContent className="p-4">
@@ -72,7 +72,7 @@ export function ContainerMetadataCard({ container }: ContainerMetadataCardProps)
             <div className="col-span-1 sm:col-span-2">
               <span className="text-sm text-muted-foreground font-medium">Mounts</span>
               <ul className="list-disc ml-4 mt-1 text-sm font-mono">
-                {container.mounts.map((mount: { source: string | number | bigint | boolean | React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<string | number | bigint | boolean | React.ReactPortal | React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | null | undefined> | null | undefined; destination: string | number | bigint | boolean | React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<string | number | bigint | boolean | React.ReactPortal | React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | null | undefined> | null | undefined; }, idx: React.Key | null | undefined) => (
+                {container.mounts.map((mount,idx) => (
                   <li key={idx}>{mount.source} → {mount.destination}</li>
                 ))}
               </ul>
