@@ -2,7 +2,6 @@ import React from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Info } from 'lucide-react';
-import { formatDistanceToNow } from 'date-fns';
 import { Container } from '@/redux/services/container/containerApi';
 import { useTranslation } from '@/hooks/use-translation';
 
@@ -46,8 +45,8 @@ export function ContainerMetadataCard({ container }: ContainerMetadataCardProps)
               {t('containers.metadata.mounts')}
             </span>
             <ul className="list-disc ml-4 mt-1 text-sm font-mono">
-              {container.mounts.map((mount, idx) => (
-                <li key={idx}>
+              {container.mounts.map((mount) => (
+               <li key={`${mount.source}-${mount.destination}`}>
                   {mount.source} → {mount.destination}
                 </li>
               ))}
