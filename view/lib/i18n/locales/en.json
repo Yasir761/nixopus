@@ -82,7 +82,14 @@
       "size": "Size",
       "containers": "Containers",
       "none": "<none>"
-    }
+    },
+    "metadata": {
+    "title": "Container Metadata",
+    "id": "Container ID",
+    "image": "Image",
+    "mounts": "Mounts",
+    "labels": "Labels"
+  }
   },
   "auth": {
     "login": {
