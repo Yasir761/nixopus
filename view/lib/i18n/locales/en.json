@@ -100,7 +100,7 @@
       "submit": "Login",
       "emailPlaceholder": "m@example.com",
       "loading": "Loading...",
-      "terms": "By clicking continue, you agree to our",
+      "terms": "By continuing, you agree to our",
       "termsOfService": "Terms of Service",
       "and": "and",
       "privacyPolicy": "Privacy Policy",
@@ -744,7 +744,8 @@
     "en": "English",
     "es": "Spanish",
     "fr": "French",
-    "kn": "Kannada"
+    "kn": "Kannada",
+    "ml": "Malayalam"
   },
   "dashboard": {
     "title": "Dashboard",
